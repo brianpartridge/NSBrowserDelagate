@@ -11,7 +11,9 @@
 
 @interface ELAppDelegate : NSObject <NSApplicationDelegate>
 
-@property IBOutlet NSBrowser *fontBrowser;
+@property (nonatomic, strong) IBOutlet NSBrowser *fontBrowser;
+@property (nonatomic, strong) ELFontList *fontList;
+
 - (IBAction)setFont:(id)sender;
 
 @end

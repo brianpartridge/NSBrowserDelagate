@@ -10,15 +10,13 @@
 
 @implementation ELAppDelegate
 
-@synthesize fontBrowser;
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    ELFontList *fontList = [[ELFontList alloc] init];
-    [fontBrowser setDelegate:fontList];
+    self.fontList = [[ELFontList alloc] init];
+    [self.fontBrowser setDelegate:self.fontList];
 }
 
 - (IBAction)setFont:(id)sender {
-    NSString *selectedFont = [[fontBrowser selectedCell] title];
+    NSString *selectedFont = [[self.fontBrowser selectedCell] title];
     NSLog(@"%@", selectedFont);
 }
 
