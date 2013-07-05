@@ -9,10 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "ELFontList.h"
 
-@interface ELAppDelegate : NSObject <NSApplicationDelegate> {
-    NSBrowser *fontBrowser;
-}
+@interface ELAppDelegate : NSObject <NSApplicationDelegate>
 
+@property IBOutlet NSBrowser *fontBrowser;
 - (IBAction)setFont:(id)sender;
 
 @end

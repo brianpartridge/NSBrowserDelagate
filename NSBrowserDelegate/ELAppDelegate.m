@@ -10,9 +10,11 @@
 
 @implementation ELAppDelegate
 
+@synthesize fontBrowser;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     ELFontList *fontList = [[ELFontList alloc] init];
-    fontBrowser = [fontList fontBrowser];
+    [fontBrowser setDelegate:fontList];
 }
 
 - (IBAction)setFont:(id)sender {
